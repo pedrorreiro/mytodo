@@ -14,7 +14,8 @@ class App extends React.Component {
       tipoMsg: '',
       msgErro: '',
       tasks: [],
-      doneTasks: []
+      doneTasks: [],
+      disabledButton: true
     };
 
   }
@@ -28,6 +29,14 @@ class App extends React.Component {
     this.setState({
       name: event.target.value
     })
+
+    if(event.target.value === ''){
+        this.setState({disabledButton: true});
+    }
+
+    else{
+      this.setState({disabledButton: false});
+    }
   }
 
 
@@ -137,7 +146,7 @@ class App extends React.Component {
               {this.state.msgErro}
             </div>
 
-            <button type="button" onClick={this.addTask} className="btn btn-primary">Adicionar tarefa</button>
+            <button type="button" disabled={this.state.disabledButton} onClick={this.addTask} className="btn btn-primary">Adicionar tarefa</button>
           </div>
 
           <br />
