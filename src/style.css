@@ -1,0 +1,58 @@
+header{
+    text-align: center;
+    align-items: center;
+    background-image: url(./img/background.jpg);
+}
+
+#createTask{
+    width: 30%;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: white;
+    margin-top: 30px;
+
+}
+
+#tasks{
+    width: 30%;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 15px;
+    background: white;
+    margin-bottom: 30px;
+    transition: max-height 1s;
+    max-height: 200;
+}
+
+#doneTasks{
+    width: 30%;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 15px;
+    background: white;
+    margin-bottom: 30px;
+    transition: max-height 1s;
+    max-height: 200;
+}
+
+.imgDesfazer{
+    width: 30px;
+    display: inline-block;
+    position: relative;
+    left: 40%;
+}
+
+.imgDesfazer:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    #createTask, #tasks, #doneTasks{
+        width: 80%;
+    }
+}
