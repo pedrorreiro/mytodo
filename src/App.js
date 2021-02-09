@@ -23,6 +23,7 @@ class App extends React.Component {
   componentDidMount() {
     this.getTasks();
     this.getDoneTasks();
+    console.log("alooo");
   }
 
   changeName = (event) => {
