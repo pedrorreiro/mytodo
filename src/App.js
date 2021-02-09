@@ -39,6 +39,21 @@ class App extends React.Component {
     }
   }
 
+  dicionario = (word) => {
+    const axios = require("axios");
+
+    axios.get('https://wordsapiv1.p.rapidapi.com/words/' + word, {
+      headers:{
+        "x-rapidapi-key": "5550afc71bmsha08e0f1091b921bp1a3226jsn962348ec98d7",
+	      "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+	      "useQueryString": true
+      }
+    })
+      .then(((response) => {
+        console.log(response);
+
+      }));
+  }
 
   changeDate = (event) => {
     this.setState({
