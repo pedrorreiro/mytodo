@@ -23,7 +23,7 @@ class App extends React.Component {
   componentDidMount() {
     this.getTasks();
     this.getDoneTasks();
-    console.log("alooo");
+    this.dicionario('hello');
   }
 
   changeName = (event) => {
@@ -45,15 +45,14 @@ class App extends React.Component {
 
     axios.get('https://wordsapiv1.p.rapidapi.com/words/' + word, {
       headers:{
-        "x-rapidapi-key": "5550afc71bmsha08e0f1091b921bp1a3226jsn962348ec98d7",
-	      "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-	      "useQueryString": true
+     'x-rapidapi-key': '5550afc71bmsha08e0f1091b921bp1a3226jsn962348ec98d7',
+    'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com'
       }
     })
-      .then(((response) => {
-        console.log(response);
+      .then((response) => {
+        console.log(response.data);
 
-      }));
+      });
   }
 
   changeDate = (event) => {
